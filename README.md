@@ -39,5 +39,8 @@ After starting a container open another CLI and enter commands to install and us
 - ```exit```
 - ```docker exec new_container ngrok http --domain=phoenix-proper-steadily.ngrok-free.app 8080```
 
+### Final notes
 
 GitHub repo should be configured with correct Payload URL (*https://phoenix-proper-steadily.ngrok-free.app/ghprbhook/*) and **Pull request** webhook event.
+
+PAT (Personal Access Token) has been configured to access and manage repository. It is saved within container's attached volume at **/var/jenkins_home/pat.txt**
