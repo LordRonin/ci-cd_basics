@@ -35,9 +35,9 @@ After starting a container open another CLI and enter commands to install and us
 ```| tee /etc/apt/sources.list.d/ngrok.list \```
 ```&& apt update \```
 ```&& apt install ngrok```
-- ```3.	ngrok config add-authtoken 2elwGnqXSHbU1ZVUeaXz0gTQlTN_34LZLxYQNS7ZM7MfWz3XN```
+- ```ngrok config add-authtoken 2elwGnqXSHbU1ZVUeaXz0gTQlTN_34LZLxYQNS7ZM7MfWz3XN```
 - ```exit```
-- ```5.	docker exec new_container ngrok http --domain=phoenix-proper-steadily.ngrok-free.app 8080```
+- ```docker exec new_container ngrok http --domain=phoenix-proper-steadily.ngrok-free.app 8080```
 
 
 GitHub repo should be configured with correct Payload URL (*https://phoenix-proper-steadily.ngrok-free.app/ghprbhook/*) and **Pull request** webhook event.
