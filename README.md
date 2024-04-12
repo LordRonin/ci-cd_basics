@@ -26,18 +26,13 @@ To run a container execute the following command:
 
 ### Configure HTTP tunnel for github-webhooks:
 
-After starting a container open another CLI and enter commands to install and use ngrok tunnel:
+After starting a container open another CLI and enter commands to install and use ngrok tunnel to allow access to Jenkins server through web endpoint https://phoenix-proper-steadily.ngrok-free.app:
 
 - ```docker exec -it new_container bash```
-- ```curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc \```
-```| tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \```
-```&& echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \```
-```| tee /etc/apt/sources.list.d/ngrok.list \```
-```&& apt update \```
-```&& apt install ngrok```
+- ```curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list && apt update && apt install ngrok```
 - ```ngrok config add-authtoken 2elwGnqXSHbU1ZVUeaXz0gTQlTN_34LZLxYQNS7ZM7MfWz3XN```
 - ```exit```
-- ```docker exec new_container ngrok http --domain=phoenix-proper-steadily.ngrok-free.app 8080```
+- ```docker exec -it new_container ngrok http --domain=phoenix-proper-steadily.ngrok-free.app 8080```
 
 ### Final notes
 
